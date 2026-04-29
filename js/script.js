@@ -5,6 +5,22 @@
   const prefersReducedMotion = () =>
     window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const getStoredValue = (key) => {
+    try {
+      return window.localStorage ? window.localStorage.getItem(key) : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const setStoredValue = (key, value) => {
+    try {
+      if (window.localStorage) window.localStorage.setItem(key, value);
+    } catch {
+      // Ignore storage failures to keep UI functional.
+    }
+  };
+
   const formatTime = (date, timeZone) => {
     const formatter = new Intl.DateTimeFormat("en-GB", {
       timeZone,
@@ -205,7 +221,7 @@
     if (!btn) return;
 
     const root = document.documentElement;
-    const saved = localStorage.getItem("ihub-theme");
+    const saved = getStoredValue("ihub-theme");
     const systemPrefersLight =
       window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
     const initial = saved || (systemPrefersLight ? "light" : "dark");
@@ -214,7 +230,7 @@
     btn.addEventListener("click", () => {
       const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
-      localStorage.setItem("ihub-theme", next);
+      setStoredValue("ihub-theme", next);
     });
   }
 
