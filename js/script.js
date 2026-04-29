@@ -691,21 +691,13 @@
       const email = String(fd.get("email") || "").trim();
       const description = String(fd.get("description") || "").trim();
 
-      // Open Gmail directly with pre-filled email for all services
-      const subject = encodeURIComponent(`Service Request: ${serviceLabel}`);
-      const body = encodeURIComponent(
-        `Hello iHub City Cyber,\n\n` +
-        `I would like to request the following service:\n` +
-        `- Service: ${serviceLabel}\n` +
-        `- Name: ${name}\n` +
-        `- Phone: ${phone}\n` +
-        `- Email: ${email}\n\n` +
-        `Description:\n${description}\n\n` +
-        `Please confirm receipt and provide next steps.`
-      );
-      window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&su=${subject}&body=${body}`, "_blank");
-            truncate(description, 420)
-          )}</div>
+      const summaryHtml = `
+        <div class="request-summary">
+          <div class="request-summary__row"><strong>Service:</strong> ${escapeHtml(serviceLabel)}</div>
+          <div class="request-summary__row"><strong>Name:</strong> ${escapeHtml(name || "Not provided")}</div>
+          <div class="request-summary__row"><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</div>
+          <div class="request-summary__row"><strong>Email:</strong> ${escapeHtml(email || "Not provided")}</div>
+          <div class="request-summary__row"><strong>Description:</strong> ${escapeHtml(truncate(description, 420) || "Not provided")}</div>
         </div>
       `;
 
@@ -719,7 +711,7 @@
         type: "success",
       });
 
-      // Open Gmail directly with pre-filled email for all services
+      // Open Gmail directly with a pre-filled draft for all services
       const subject = encodeURIComponent(`Service Request: ${serviceLabel}`);
       const body = encodeURIComponent(
         `Hello iHub City Cyber,\n\n` +
@@ -731,9 +723,8 @@
         `Description:\n${description}\n\n` +
         `Please confirm receipt and provide next steps.`
       );
-      
       window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&su=${subject}&body=${body}`, "_blank");
-      
+
       showToast({
         title: "Opening Gmail",
         message: "Please send the pre-filled email to complete your request.",
