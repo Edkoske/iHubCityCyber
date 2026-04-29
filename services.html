@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="iHub City Cyber services — printing, scanning, KRA/eCitizen support, applications, design, development, and training in Kenya." />
+    <title>Services — iHub City Cyber</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+      <div class="loader" role="status" aria-label="Loading"></div>
+      <div class="loading-text">Loading services...</div>
+    </div>
+
+    <a id="backToTop" class="back-to-top" href="#top" aria-label="Back to top">
+      <span class="back-to-top__icon" aria-hidden="true">↑</span>
+    </a>
+
+    <div class="page" id="top">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="iHub City Cyber home">
+            <span class="brand__logo" aria-hidden="true"><img src="images/logo.jpg" alt="iHub City Cyber" width="28" height="28"></span>
+            <span class="brand__text">
+              <span class="brand__name">iHub City Cyber</span>
+              <span class="brand__tag">Your Digital Solutions Hub</span>
+            </span>
+          </a>
+
+          <nav class="nav" aria-label="Primary navigation">
+            <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" type="button">
+              <span aria-hidden="true"></span>
+              <span class="sr-only">Menu</span>
+            </button>
+
+            <ul class="nav__list" id="navList">
+              <li><a class="nav__link" href="index.html">Home</a></li>
+              <li><a class="nav__link" href="about.html">About</a></li>
+              <li><a class="nav__link active" href="services.html">Services</a></li>
+              <li><a class="nav__link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav__link" href="training.html">Training</a></li>
+              <li><a class="nav__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <div class="clock" title="Kenya time">
+              <span class="clock__label">Kenya</span>
+              <span class="clock__time" id="kenyaClock">--:--:--</span>
+            </div>
+
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark and light mode" title="Toggle theme">
+              <span class="icon-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2a9.8 9.8 0 1 0 10 10c-5.2 1-9.6-3.4-10-10Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <a class="btn btn-primary btn-sm" href="request.html" aria-label="Book a service">
+              Book a Service
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <section class="page-hero">
+          <div class="container">
+            <div class="page-hero__inner glass">
+              <div class="page-hero__eyebrow">Services</div>
+              <h1 class="page-hero__title">Premium, fast digital support—built for real outcomes.</h1>
+              <p class="page-hero__sub muted">
+                Choose your service and request instantly. We’ll confirm your documents and provide an estimated delivery time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="service-top grid grid-2">
+              <figure class="media-frame service-top__media" aria-hidden="true">
+                <img
+                  src="images/kuccps application.jpg"
+                  alt="Customer working on a KUCCPS application"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="glass service-top__copy">
+                <h2 class="h3">Professional document support</h2>
+                <p class="p muted">
+                  Premium printing, scanning, applications, and finishing—handled with business-first care.
+                  Choose a service and we’ll estimate your timeline.
+                </p>
+                <div style="margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap">
+                  <a class="btn btn-gradient btn-sm" href="request.html?service=printing_copying">Request a Quote</a>
+                  <a class="btn btn-secondary btn-sm" href="pricing.html">View Pricing</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-3 service-grid">
+              <article class="service-card card card--hover glass" id="printing" data-svc-card data-svc="printing_copying">
+                <div class="service-card__icon icon-slot" data-icon="print"></div>
+                <h3 class="h3">Printing &amp; Photocopying</h3>
+                <p class="p muted">Fast prints and clean copies for documents, CVs, and business needs.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=printing_copying">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" id="scanning" data-svc-card data-svc="scanning">
+                <div class="service-card__icon icon-slot" data-icon="scan"></div>
+                <h3 class="h3">Scanning</h3>
+                <p class="p muted">High-quality scans with formatting that’s ready for uploading.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=scanning">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="kra_services">
+                <div class="service-card__icon icon-slot" data-icon="shield"></div>
+                <h3 class="h3">KRA Services</h3>
+                <p class="p muted">Help with documents and guided steps for KRA-related tasks.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=kra_services">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" id="applications" data-svc-card data-svc="ecitizen">
+                <div class="service-card__icon icon-slot" data-icon="portal"></div>
+                <h3 class="h3">eCitizen Applications</h3>
+                <p class="p muted">Structured support for applications and document readiness checks.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=ecitizen">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="hebl">
+                <div class="service-card__icon icon-slot" data-icon="edu"></div>
+                <h3 class="h3">HELB Applications</h3>
+                <p class="p muted">Help preparing the right documents and completing steps accurately.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=hebl">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="passport">
+                <div class="service-card__icon icon-slot" data-icon="passport"></div>
+                <h3 class="h3">Passport Applications</h3>
+                <p class="p muted">Guidance and document processing support for passport tasks.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=passport">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="cv_writing">
+                <div class="service-card__icon icon-slot" data-icon="cv"></div>
+                <h3 class="h3">CV Writing</h3>
+                <p class="p muted">Professional CVs with clean formatting and ATS-friendly structure.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=cv_writing">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="binding_laminating">
+                <div class="service-card__icon icon-slot" data-icon="bind"></div>
+                <h3 class="h3">Binding &amp; Laminating</h3>
+                <p class="p muted">Quality finishing for reports, certificates, and important documents.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=binding_laminating">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="online_jobs">
+                <div class="service-card__icon icon-slot" data-icon="jobs"></div>
+                <h3 class="h3">Online Job Applications</h3>
+                <p class="p muted">Support submitting applications and packaging your documents correctly.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=online_jobs">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="ntsa">
+                <div class="service-card__icon icon-slot" data-icon="car"></div>
+                <h3 class="h3">NTSA Services</h3>
+                <p class="p muted">Assist with document readiness and guided submission workflows.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=ntsa">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="sha">
+                <div class="service-card__icon icon-slot" data-icon="reg"></div>
+                <h3 class="h3">SHA Registration</h3>
+                <p class="p muted">Help preparing forms and completing steps with accuracy.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=sha">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" id="design" data-svc-card data-svc="graphic_design">
+                <div class="service-card__icon icon-slot" data-icon="design"></div>
+                <h3 class="h3">Graphic Design</h3>
+                <p class="p muted">Logos, flyers, banners, and professional graphics for events and business.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=graphic_design">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="website_dev">
+                <div class="service-card__icon icon-slot" data-icon="web"></div>
+                <h3 class="h3">Website Development</h3>
+                <p class="p muted">Modern websites built with clean UI and responsive performance.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=website_dev">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="computer_training">
+                <div class="service-card__icon icon-slot" data-icon="train"></div>
+                <h3 class="h3">Computer Packages Training</h3>
+                <p class="p muted">Hands-on training modules in Word, Excel, PowerPoint and more.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=computer_training">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="passport_photos">
+                <div class="service-card__icon icon-slot" data-icon="photo"></div>
+                <h3 class="h3">Passport Photo Services</h3>
+                <p class="p muted">Professional passport photos with correct formatting guidance.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=passport_photos">Request Service</a>
+              </article>
+
+              <article class="service-card card card--hover glass" data-svc-card data-svc="email_compose">
+                <div class="service-card__icon icon-slot" data-icon="email"></div>
+                <h3 class="h3">Email Compose (Gmail)</h3>
+                <p class="p muted">Open Gmail and compose emails with image attachments.</p>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=email_compose">Request Service</a>
+              </article>
+            </div>
+
+            <div class="divider glass" aria-hidden="true"></div>
+
+            <div class="glass callout">
+              <div class="callout__icon" aria-hidden="true">★</div>
+              <div class="callout__copy">
+                <h3 class="h3">Not sure what you need?</h3>
+                <p class="p muted">
+                  Use the request form and describe your need. Our team will recommend the right service and next steps.
+                </p>
+              </div>
+              <a class="btn btn-gradient" href="request.html">Request Support</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2">FAQ</h2>
+              <p class="muted">Answers to common questions.</p>
+            </div>
+
+            <div class="faq" id="faq">
+              <div class="faq__item glass" data-faq>
+                <button class="faq__q" type="button" aria-expanded="false">
+                  Do you provide consultation before starting?
+                  <span class="faq__chev" aria-hidden="true">+</span>
+                </button>
+                <div class="faq__a" aria-hidden="true">
+                  <p class="p muted">
+                    Yes. We review your documents and explain the steps so you understand what’s included.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq__item glass" data-faq>
+                <button class="faq__q" type="button" aria-expanded="false">
+                  Can I request a service online?
+                  <span class="faq__chev" aria-hidden="true">+</span>
+                </button>
+                <div class="faq__a" aria-hidden="true">
+                  <p class="p muted">
+                    Yes. Book through our request form. You can also upload supporting files for faster handling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq__item glass" data-faq>
+                <button class="faq__q" type="button" aria-expanded="false">
+                  Do you offer training packages?
+                  <span class="faq__chev" aria-hidden="true">+</span>
+                </button>
+                <div class="faq__a" aria-hidden="true">
+                  <p class="p muted">
+                    Definitely. Our computer packages training modules are designed for practical learning with business use cases.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <div class="brand brand--footer">
+              <span class="brand__logo" aria-hidden="true"><img src="images/logo.jpg" alt="iHub City Cyber" width="28" height="28"></span>
+              <div class="brand__text">
+                <div class="brand__name">iHub City Cyber</div>
+                <div class="brand__tag">Your Digital Solutions Hub</div>
+              </div>
+            </div>
+            <p class="muted">
+              Premium digital services designed for speed, accuracy, and trust—right here in Kenya.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Quick links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="services.html#printing">Printing</a></li>
+              <li><a href="services.html#scanning">Scanning</a></li>
+              <li><a href="services.html#applications">Applications</a></li>
+              <li><a href="services.html#design">Design</a></li>
+              <li><a href="training.html">Training</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Contact</h3>
+            <div class="footer-contact">
+              <div class="footer-item">
+                <span class="footer-item__label">Phone</span>
+                <a class="footer-item__value" href="tel:+254712824017">+254 712 824017</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">WhatsApp</span>
+                <a class="footer-item__value" href="https://wa.me/254712824017" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">Email</span>
+                <a class="footer-item__value" href="mailto:hello@ihubcitycyber.ke">hello@ihubcitycyber.ke</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">Location</span>
+                <span class="footer-item__value">Kenya</span>
+              </div>
+            </div>
+
+            <div class="social-row" aria-label="Social links">
+              <a class="social" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4l16 16M20 4 4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M8 11v7M8 8.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M12 18v-4c0-1.7 2-2 2-2s2 .3 2 2v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container footer-bottom__inner">
+            <div class="muted">© 2026 iHub City Cyber. All Rights Reserved.</div>
+            <div class="footer-bottom__right">
+              <a class="link" href="request.html">Book Now</a>
+              <span class="dot" aria-hidden="true"></span>
+              <a class="link" href="contact.html">Get Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="toastHost" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
+

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pricing — iHub City Cyber printing, CV writing, applications, and training packages." />
+    <title>Pricing — iHub City Cyber</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+      <div class="loader" role="status" aria-label="Loading"></div>
+      <div class="loading-text">Loading pricing...</div>
+    </div>
+
+    <a id="backToTop" class="back-to-top" href="#top" aria-label="Back to top">
+      <span class="back-to-top__icon" aria-hidden="true">↑</span>
+    </a>
+
+    <div class="page" id="top">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="iHub City Cyber home">
+            <span class="brand__logo" aria-hidden="true"><img src="images/logo.jpg" alt="iHub City Cyber" width="28" height="28"></span>
+            <span class="brand__text">
+              <span class="brand__name">iHub City Cyber</span>
+              <span class="brand__tag">Your Digital Solutions Hub</span>
+            </span>
+          </a>
+
+          <nav class="nav" aria-label="Primary navigation">
+            <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" type="button">
+              <span aria-hidden="true"></span>
+              <span class="sr-only">Menu</span>
+            </button>
+
+            <ul class="nav__list" id="navList">
+              <li><a class="nav__link" href="index.html">Home</a></li>
+              <li><a class="nav__link" href="about.html">About</a></li>
+              <li><a class="nav__link" href="services.html">Services</a></li>
+              <li><a class="nav__link active" href="pricing.html">Pricing</a></li>
+              <li><a class="nav__link" href="training.html">Training</a></li>
+              <li><a class="nav__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <div class="clock" title="Kenya time">
+              <span class="clock__label">Kenya</span>
+              <span class="clock__time" id="kenyaClock">--:--:--</span>
+            </div>
+
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark and light mode" title="Toggle theme">
+              <span class="icon-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2a9.8 9.8 0 1 0 10 10c-5.2 1-9.6-3.4-10-10Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <a class="btn btn-primary btn-sm" href="request.html" aria-label="Book a service">
+              Book a Service
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <section class="page-hero">
+          <div class="container">
+            <div class="page-hero__inner glass">
+              <div class="page-hero__eyebrow">Pricing</div>
+              <h1 class="page-hero__title">Transparent pricing with premium delivery.</h1>
+              <p class="page-hero__sub muted">
+                Prices are indicative. Final pricing depends on quantity, complexity, and turnaround time. Request a service for a confirmed quote.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="grid grid-4 pricing-grid">
+              <article class="price-card glass card--hover">
+                <div class="price-card__head">
+                  <div class="price-card__badge">Popular</div>
+                  <h3 class="h3">Printing</h3>
+                </div>
+                <div class="price-card__price">
+                  <span class="price-card__amount">KSh 10</span>
+                  <span class="price-card__unit">/ page</span>
+                </div>
+                <ul class="price-card__list">
+                  <li>Black & white printing (KSh 10/page)</li>
+                  <li>Color prints (premium): KSh 20/page</li>
+                  <li>Photocopy support (B&W: KSh 10/page)</li>
+                  <li>Binding available (from KSh 50)</li>
+                </ul>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=printing_copying">Request</a>
+              </article>
+
+              <article class="price-card glass card--hover price-card--highlight">
+                <div class="price-card__head">
+                  <div class="price-card__badge price-card__badge--neon">Career Boost</div>
+                  <h3 class="h3">CV Writing</h3>
+                </div>
+                <div class="price-card__price">
+                  <span class="price-card__amount">KSh 500</span>
+                  <span class="price-card__unit">/ CV</span>
+                </div>
+                <ul class="price-card__list">
+                  <li>Professional formatting</li>
+                  <li>ATS-friendly structure</li>
+                  <li>Edits & improvements</li>
+                  <li>Optional printing support</li>
+                </ul>
+                <a class="btn btn-gradient btn-sm" href="request.html?service=cv_writing">Request</a>
+              </article>
+
+              <article class="price-card glass card--hover">
+                <div class="price-card__head">
+                  <div class="price-card__badge">Apps</div>
+                  <h3 class="h3">Applications</h3>
+                </div>
+                <div class="price-card__price">
+                  <span class="price-card__amount">KSh 200</span>
+                  <span class="price-card__unit">+ guidance</span>
+                </div>
+                <ul class="price-card__list">
+                  <li>eCitizen help</li>
+                  <li>KRA document support</li>
+                  <li>Passport & HELB guidance</li>
+                  <li>File prep & checks</li>
+                </ul>
+                <a class="btn btn-secondary btn-sm" href="request.html?service=ecitizen">Request</a>
+              </article>
+
+              <article class="price-card glass card--hover">
+                <div class="price-card__head">
+                  <div class="price-card__badge">Learn</div>
+                  <h3 class="h3">Training packages</h3>
+                </div>
+                <div class="price-card__price">
+                  <span class="price-card__amount">KSh 4,000</span>
+                  <span class="price-card__unit">/ bundle</span>
+                </div>
+                <ul class="price-card__list">
+                  <li>Word, Excel, PowerPoint</li>
+                  <li>Internet & email basics</li>
+                  <li>Practical tasks</li>
+                  <li>Certificate on completion (placeholder)</li>
+                </ul>
+                <a class="btn btn-secondary btn-sm" href="training.html">View Training</a>
+              </article>
+            </div>
+
+            <div class="glass callout callout--compact" style="margin-top: 16px">
+              <div class="callout__icon" aria-hidden="true">⚙</div>
+              <div class="callout__copy">
+                <h3 class="h3">Need a customized quote?</h3>
+                <p class="p muted">
+                  Upload documents and share your details through the request form. We’ll confirm pricing and timeline.
+                </p>
+              </div>
+              <a class="btn btn-gradient" href="request.html">Get a Quote</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt">
+          <div class="container">
+            <div class="section-head">
+              <h2 class="h2">FAQ</h2>
+              <p class="muted">Pricing questions answered.</p>
+            </div>
+
+            <div class="faq" id="faq">
+              <div class="faq__item glass" data-faq>
+                <button class="faq__q" type="button" aria-expanded="false">
+                  Are prices final?
+                  <span class="faq__chev" aria-hidden="true">+</span>
+                </button>
+                <div class="faq__a" aria-hidden="true">
+                  <p class="p muted">No. Prices are indicative. Final quotes depend on document size, quantity, and required steps.</p>
+                </div>
+              </div>
+
+              <div class="faq__item glass" data-faq>
+                <button class="faq__q" type="button" aria-expanded="false">
+                  Do you offer quick turnaround?
+                  <span class="faq__chev" aria-hidden="true">+</span>
+                </button>
+                <div class="faq__a" aria-hidden="true">
+                  <p class="p muted">
+                    Yes for common services like printing and scanning. For applications, we’ll estimate after checking your documents.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <div class="brand brand--footer">
+              <span class="brand__logo" aria-hidden="true"><img src="images/logo.jpg" alt="iHub City Cyber" width="28" height="28"></span>
+              <div class="brand__text">
+                <div class="brand__name">iHub City Cyber</div>
+                <div class="brand__tag">Your Digital Solutions Hub</div>
+              </div>
+            </div>
+            <p class="muted">Premium digital services designed for speed, accuracy, and trust—right here in Kenya.</p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Quick links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="services.html#printing">Printing</a></li>
+              <li><a href="services.html#scanning">Scanning</a></li>
+              <li><a href="services.html#applications">Applications</a></li>
+              <li><a href="services.html#design">Design</a></li>
+              <li><a href="training.html">Training</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Contact</h3>
+            <div class="footer-contact">
+              <div class="footer-item">
+                <span class="footer-item__label">Phone</span>
+                <a class="footer-item__value" href="tel:+254712824017">+254 712 824017</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">WhatsApp</span>
+                <a class="footer-item__value" href="https://wa.me/254712824017" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">Email</span>
+                <a class="footer-item__value" href="mailto:hello@ihubcitycyber.ke">hello@ihubcitycyber.ke</a>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__label">Location</span>
+                <span class="footer-item__value">Kenya</span>
+              </div>
+            </div>
+
+            <div class="social-row" aria-label="Social links">
+              <a class="social" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4l16 16M20 4 4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="social" href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M8 11v7M8 8.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M12 18v-4c0-1.7 2-2 2-2s2 .3 2 2v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container footer-bottom__inner">
+            <div class="muted">© 2026 iHub City Cyber. All Rights Reserved.</div>
+            <div class="footer-bottom__right">
+              <a class="link" href="request.html">Book Now</a>
+              <span class="dot" aria-hidden="true"></span>
+              <a class="link" href="contact.html">Get Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="toastHost" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
+
