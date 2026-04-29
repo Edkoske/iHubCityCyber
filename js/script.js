@@ -691,21 +691,19 @@
       const email = String(fd.get("email") || "").trim();
       const description = String(fd.get("description") || "").trim();
 
-      const summaryHtml = `
-        <div class="grid grid-2" style="gap: 12px;">
-          <div class="glass" style="padding: 12px; border-radius: 16px;">
-            <div class="muted" style="font-weight: 900; font-size: 13px;">Service</div>
-            <div style="margin-top: 6px; font-weight: 950;">${escapeHtml(serviceLabel)}</div>
-          </div>
-          <div class="glass" style="padding: 12px; border-radius: 16px;">
-            <div class="muted" style="font-weight: 900; font-size: 13px;">Contact</div>
-            <div style="margin-top: 6px; font-weight: 900;">${escapeHtml(name)} • ${escapeHtml(phone)}</div>
-            <div style="margin-top: 4px; color: var(--muted); font-weight: 800;">${escapeHtml(email)}</div>
-          </div>
-        </div>
-        <div class="glass" style="padding: 12px; border-radius: 16px; margin-top: 12px;">
-          <div class="muted" style="font-weight: 900; font-size: 13px;">Description</div>
-          <div style="margin-top: 6px; color: var(--text2); font-weight: 750; line-height: 1.6;">${escapeHtml(
+      // Open Gmail directly with pre-filled email for all services
+      const subject = encodeURIComponent(`Service Request: ${serviceLabel}`);
+      const body = encodeURIComponent(
+        `Hello iHub City Cyber,\n\n` +
+        `I would like to request the following service:\n` +
+        `- Service: ${serviceLabel}\n` +
+        `- Name: ${name}\n` +
+        `- Phone: ${phone}\n` +
+        `- Email: ${email}\n\n` +
+        `Description:\n${description}\n\n` +
+        `Please confirm receipt and provide next steps.`
+      );
+      window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&su=${subject}&body=${body}`, "_blank");
             truncate(description, 420)
           )}</div>
         </div>
@@ -721,24 +719,30 @@
         type: "success",
       });
 
-      // Optional: reset form, but keep service selection for convenience.
+      // Open Gmail directly with pre-filled email for all services
+      const subject = encodeURIComponent(`Service Request: ${serviceLabel}`);
+      const body = encodeURIComponent(
+        `Hello iHub City Cyber,\n\n` +
+        `I would like to request the following service:\n` +
+        `- Service: ${serviceLabel}\n` +
+        `- Name: ${name}\n` +
+        `- Phone: ${phone}\n` +
+        `- Email: ${email}\n\n` +
+        `Description:\n${description}\n\n` +
+        `Please confirm receipt and provide next steps.`
+      );
+      
+      window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&su=${subject}&body=${body}`, "_blank");
+      
+      showToast({
+        title: "Opening Gmail",
+        message: "Please send the pre-filled email to complete your request.",
+        type: "success",
+      });
+
+      // Reset form but keep service selection for convenience
       form.reset();
       if (serviceNeededSelect && serviceId) serviceNeededSelect.value = serviceId;
-
-      // Special handling for email compose service - open Gmail with image
-      if (serviceId === "email_compose") {
-        const fileInput = $("#fileUpload");
-        if (fileInput && fileInput.files && fileInput.files[0]) {
-          // If user uploaded an image, show instructions
-          showToast({
-            title: "Opening Gmail",
-            message: "Please attach your image in Gmail and compose your email.",
-            type: "info",
-          });
-        }
-        // Open Gmail compose in a new tab
-        window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1", "_blank");
-      }
     });
   }
 
