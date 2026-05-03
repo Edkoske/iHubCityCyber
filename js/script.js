@@ -261,7 +261,14 @@
     const links = $$('a[href^="#"]');
     for (const a of links) {
       const href = a.getAttribute("href");
-      if (!href || href === "#") continue;
+      if (!href || href === "#") {
+        if (a.classList.contains("social")) {
+          a.setAttribute("aria-disabled", "true");
+          a.setAttribute("tabindex", "-1");
+          a.addEventListener("click", (e) => e.preventDefault());
+        }
+        continue;
+      }
       const id = href.slice(1);
       const target = document.getElementById(id);
       if (!target) continue;
